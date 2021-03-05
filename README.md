@@ -112,10 +112,9 @@ and we can do that simply using
 ```swift
      headerView.collectionView.collectionViewLayout.invalidateLayout()
 ```
-this well invoke all the "UICollectionViewDelegateFlowLayout" and the size well be updated.
+this well invoke all the "UICollectionViewDelegateFlowLayout" methods and the size well be updated.
 
-So one solition we can do is has an clousre on our custom flow layout class and we can invoke this clousure when we update the header layout attribut frame.
-
+So one solution we can do is have closure on our custom flow layout class and we can invoke this closure when we update the header layout attribute frame.
 
 ```swift
     typealias UpdateLayoutAttributesObserver = (() -> Void)
